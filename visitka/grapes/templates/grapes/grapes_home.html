@@ -1,0 +1,23 @@
+{% extends 'grapes/layout.html' %}
+{% load static %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Винограды</h1>
+        <p>Этот сайт обо мне, мне сказано сделать его, поэтому мне придется, что-то делать, чтобы был сайт, желаетльно красивый</p>
+        <a href="{% url 'home' %}"><button>На главную</button></a>
+
+
+    </div>
+    <div class="conteiner">
+        {% for el in sorts %}
+            <div class="grape_card">
+                <div class="title"><img class="img" src="{% static 'grapes/img/img.jpg' %}" alt="grapes">{{ el.name }}<div class="desc"> {{ el.description }} </div></div>
+                
+            </div>
+        
+        {% endfor %}
+    </div>
+{% endblock %}
