@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Grape List</title>
+    <link rel="stylesheet"  href="{% static 'grapes/css/main.css' %}">
+</head>
+<body>
+    <h1>Grape List</h1>
+    {% for grape in grapes %}
+        <div class="grape">
+            <img src="{% static 'grapes/img/' %}{{ grape.img_name }}" alt="{{ grape.name }}">
+            <div>
+                <h2>{{ grape.name }}</h2>
+                <p>{{ grape.description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</body>
+</html>

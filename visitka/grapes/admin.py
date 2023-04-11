@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Sorts_of_grapes
+from .models import Grape
 
-admin.site.register(Sorts_of_grapes)
+admin.site.register(Grape)
 
 # Register your models here.

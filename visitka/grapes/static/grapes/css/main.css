@@ -1,91 +1,74 @@
+/* styles.css */
+
+/* Установить шрифт и цвет фона страницы */
 body {
-    background: #1a279b;
+  font-family: 'Helvetica', sans-serif;
+  background-color: #f8f8f8;
 }
 
-
-
-aside{
-    float: left;
-    background: #181818;
-    width: 20%;
-    padding: 2.5%;
-    height: 100vh;
-    color: #fff;
-    border-right: 5px solid #5d4d4d;
+/* Стили для главного заголовка */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-aside ul {list-style:none}
-
-aside ul li {
-    color: #fff;
-    display: block;
-    margin-top: 20px;
-    transition: transform .6s ease;
+/* Стили для каждого блока сорта винограда */
+.grape {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
 }
 
-aside ul li:hover, aside ul a:hover {
-    color: #784a92;
-    text-decoration: none;
-    transform:scale(1.05);
-}
-main button{
-    background-color:#997474;
-    border-style: none;
-    transition: transform .6s ease;
-}
-main button:hover {
-    
-    transform: scale(1.15);
+.grape:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
-main .features{
-    float: left;
-    margin-top: 100px;
-    text-align: center;
-    width: 75%;
-}
-main .features h1 {font-size: 70px; color: aquamarine;}
-main .features p {max-width: 400px; margin: 20px auto;}
-
-
- main div.features p {
-
-    font-size: medium;
-    color:#e0e0e0;
-
+.grape:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
-main .conteiner {
-    float: left;
-    display: flex;
-    flex-wrap: wrap;
-    /* margin-left: 1px; */
-    width: 80%;
+.grape:hover .grape-text {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
 }
 
-main .grape_card {
-    float: left;
-    text-align: center;
-    background-color: rgb(125, 219, 172);
-    margin-top: 20px;
-    margin: 2% 2%;
-    width: 40%;
-    height: 300px;
-    transition: transform .2s ease-in;
-    box-shadow: 2px 2px #fff;
-    border-radius: 10px;
-
+.grape-text {
+  /* ... */
+  transition: transform 0.3s ease;
 }
-main .title { float: right; font-size: 25px; font-weight: bold;}
-main .desc {font-size: 20px;font-weight: normal;}
-
-main .img {
-    float: left; 
-    height: 300px;
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px; 
-    object-fit: cover;
+/* Стили для изображения в каждом блоке */
+.grape img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 100px;
 }
-main .grape_card:hover{transform: scale(1.15);}
+
+/* Стили для названия каждого сорта */
+.grape h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Стили для описания каждого сорта */
+.grape p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
 
 
