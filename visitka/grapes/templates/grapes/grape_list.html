@@ -8,15 +8,28 @@
     <link rel="stylesheet"  href="{% static 'grapes/css/main.css' %}">
 </head>
 <body>
-    <h1>Grape List</h1>
-    {% for grape in grapes %}
-        <div class="grape">
+    <div class="header">
+<!--        <button class="bue">Корзина</button>-->
+<!--        <button class="log/reg">Войти</button>-->
+        <a href="{% url 'home' %}"><button>На главную</button> </a>
+<!--        <h3>Чтобы заказать виноград, напишите письмо на эл. почту grape_online@grape.ru</h3>-->
+        <code>Чтобы заказать виноград, напишите письмо на эл. почту <code class="mail">grape_online@grape.ru</code></code>
+    </div>
+    <div class="container">
+    <h1 class="text-center my-5">Сорта винограда</h1>
+    <div class="row">
+      {% for grape in grapes %}
+        <div class="grape col-md-4 mb-5">
+          <div class="grape-img">
             <img src="{% static 'grapes/img/' %}{{ grape.img_name }}" alt="{{ grape.name }}">
-            <div>
-                <h2>{{ grape.name }}</h2>
-                <p>{{ grape.description }}</p>
-            </div>
+          </div>
+          <div class="grape-info">
+            <h3>{{ grape.name }}</h3>
+            <p>{{ grape.description }}</p>
+          </div>
         </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
 </body>
 </html>
